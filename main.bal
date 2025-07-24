@@ -1,4 +1,5 @@
 import ballerina/http;
+import ballerina/log;
 
 final http:Client countriesClient = check new ("https://dev-tools.wso2.com/gs/helpers/v1.0/");
 
