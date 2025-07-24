@@ -9,6 +9,7 @@ service / on new http:Listener(8080) {
         log:printInfo("Fetching countries data from external API...");
         // Sending a GET request to the "/countries" endpoint and retrieving an array of `Country` records.
         Country[] countries = check countriesClient->/countries;
+        log:printDebug("Countries data fetched successfully: " + countries.toString());
         return countries;
     }
 }
